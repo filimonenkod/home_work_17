@@ -161,7 +161,9 @@
     display: flex;
     gap: 120px;
 
-    @include mobile () {
+    // @include mobile () {}
+
+    @include laptop () {
         flex-direction: column-reverse;
         flex-wrap: wrap;
         gap: 0;

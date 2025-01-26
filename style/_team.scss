@@ -76,7 +76,7 @@
     flex-wrap: wrap;
     gap: 47px;
 
-    @include mobile () {
+    @include laptop () {
         gap: 35px;
         justify-content: center;
         margin-bottom: 45px;

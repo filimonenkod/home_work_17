@@ -48,7 +48,7 @@
     display: flex;
     margin-bottom: 74px;
 
-    @include mobile () {
+    @include laptop () {
         flex-wrap: wrap;
         margin-bottom: 0;
     }
@@ -72,7 +72,7 @@
 .catalog-working {
     display: flex;
 
-    @include mobile () {
+    @include laptop () {
         flex-wrap: wrap;
         flex-direction: column-reverse;
     }
