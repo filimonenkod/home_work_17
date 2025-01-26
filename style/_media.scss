@@ -1,0 +1,31 @@
+@import "skin";
+
+@mixin large() {
+    @media (max-width: $breakpoint_xxl) {
+        @content;
+    }
+}
+
+@mixin desktop() {
+    @media (max-width: $breakpoint_xl) {
+        @content;
+    }
+}
+
+@mixin laptop() {
+    @media (max-width: $breakpoint_l) {
+        @content;
+    }
+}
+
+@mixin tablet() {
+    @media (max-width: $breakpoint_m) {
+        @content;
+    }
+}
+
+@mixin mobile() {
+    @media (max-width: $breakpoint_sm) {
+        @content;
+    }
+}

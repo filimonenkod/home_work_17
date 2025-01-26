@@ -1,0 +1,84 @@
+@import "media";
+@import "mixins";
+@import "skin";
+
+.about {
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 60px;
+    padding-bottom: 73px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__container {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin: 0 auto;
+    }
+
+
+    &__text {
+        font-family: $font-main;
+        font-weight: 700;
+        font-size: 16px;
+
+        line-height: 125%;
+        letter-spacing: 0.31em;
+        text-transform: uppercase;
+        text-align: center;
+        color: $color-green;
+        margin-bottom: 16px;
+    }
+
+    &__title {
+        font-family: $font-additional;
+        font-weight: 700;
+        font-size: 40px;
+
+        line-height: 125%;
+        text-align: center;
+        color: $color-black;
+        margin-bottom: 16px;
+    }
+
+    &__paragraph {
+        font-family: $font-main;
+        font-weight: 400;
+        font-size: 20px;
+
+        line-height: 125%;
+        text-align: center;
+        color: $color-black;
+
+    }
+
+    &__items {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 65px;
+        margin: 55px auto;
+
+        @include mobile () {
+            justify-content: center;
+            flex-direction: column;
+        }
+    }
+
+    &__btn {
+        border-radius: 5px;
+        width: 170px;
+        height: 48px;
+        background: $color-dark;
+
+        font-family: $font-main;
+        font-weight: 400;
+        font-size: 20px;
+
+        line-height: 125%;
+        text-align: center;
+        color: $color-white;
+    }
+}

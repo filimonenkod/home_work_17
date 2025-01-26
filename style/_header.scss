@@ -1,0 +1,222 @@
+@import "media";
+@import "mixins";
+@import "skin";
+
+.header {
+    background-color: $color-green;
+}
+
+.header-wrapper {
+    width: 82%;
+    margin: 0 auto;
+    padding-top: 35px;
+    padding-bottom: 82px;
+
+    @include mobile () {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.header-menu {
+    display: flex;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    @include mobile () {
+        display: flex;
+    }
+}
+
+#menu__toggle {
+    opacity: 0;
+}
+
+.menu__btn {
+    @include mobile () {
+        position: fixed;
+        width: 35px;
+        cursor: pointer;
+        z-index: 1;
+    }
+
+}
+
+.menu__btn>span,
+.menu__btn>span::before,
+.menu__btn>span::after {
+    @include mobile () {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: $color-white;
+        ;
+    }
+
+
+}
+
+@include mobile () {
+    .menu__btn>span::before {
+        content: '';
+        top: -8px;
+    }
+
+    .menu__btn>span::after {
+        content: '';
+        top: 8px;
+    }
+}
+
+
+.header-logo {
+    &__container {
+        display: flex;
+    }
+
+    &__picture {
+        width: 100%;
+        height: 50px;
+        margin-right: 18px;
+    }
+
+    &__name {
+        @include font-typography($color-white,
+            $font-main,
+            40px,
+            normal,
+            500,
+            125%)
+    }
+}
+
+#menu__toggle:checked~.menu__btn>span {
+    transform: rotate(45deg);
+}
+
+#menu__toggle:checked~.menu__btn>span::before {
+    top: 0;
+    transform: rotate(0);
+}
+
+#menu__toggle:checked~.menu__btn>span::after {
+    top: 0;
+    transform: rotate(90deg);
+}
+
+#menu__toggle:checked~.header-navigation__list {
+    visibility: visible;
+    right: 0;
+}
+
+.header-navigation {
+    &__container {
+        display: inline;
+    }
+
+    &__list {
+        display: flex;
+        gap: 30px;
+        list-style: none;
+        font-family: "Work Sans", sans-serif;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 125%;
+        text-align: right;
+        color: #fff;
+
+        @include mobile () {
+            display: block;
+            position: fixed;
+            visibility: hidden;
+            list-style: none;
+            text-align: center;
+            box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+        }
+    }
+
+    &__item {
+        @include mobile () {
+            display: block;
+            padding: 12px 24px;
+            color: #ffffff;
+            font-family: 'Roboto', sans-serif;
+            font-size: 20px;
+            font-weight: 600;
+            text-decoration: none;
+        }
+    }
+
+    &__item:hover {
+        @include mobile () {
+            background-color: #5fa381;
+        }
+    }
+}
+
+.header-content {
+    display: flex;
+    gap: 120px;
+
+    @include mobile () {
+        flex-direction: column-reverse;
+        flex-wrap: wrap;
+        gap: 0;
+    }
+
+    &__container {
+        margin-top: 40px;
+    }
+
+    &__name {
+        font-family: $font-main;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 125%;
+        letter-spacing: 0.31em;
+        text-transform: uppercase;
+        color: $color-white;
+        margin-bottom: 15px;
+    }
+
+    &__title {
+        font-family: $font-additional;
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 125%;
+        color: $color-white;
+        margin-bottom: 15px;
+    }
+
+    &__text {
+        font-family: $font-main;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 125%;
+        color: $color-darkWhite;
+        margin-bottom: 25px;
+    }
+
+    &__btn {
+        border-radius: 5px;
+        width: 170px;
+        height: 48px;
+        background-color: $color-white;
+        font-family: $font-main;
+        font-weight: 400;
+        font-size: 20px;
+
+        line-height: 125%;
+        text-align: center;
+        color: $color-black;
+    }
+
+    &__picture {
+        @include mobile () {
+            width: 100%;
+        }
+    }
+}

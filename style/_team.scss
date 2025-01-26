@@ -1,0 +1,116 @@
+@import "media";
+@import "mixins";
+@import "skin";
+
+.team-container {
+    width: 80%;
+    margin: 0 auto;
+    padding-bottom: 72px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include mobile () {
+        padding-bottom: 40px;
+    }
+}
+
+.team-text {
+    padding-bottom: 45px;
+}
+
+.team-subtitle {
+    font-family: $font-main;
+    font-weight: 700;
+    font-size: 16px;
+
+
+    line-height: 20px;
+    letter-spacing: 0.31em;
+    text-transform: uppercase;
+    text-align: center;
+    color: $color-green;
+    padding-bottom: 16px;
+}
+
+.team-title {
+    font-family: $font-additional;
+    font-weight: 700;
+    font-size: 40px;
+
+    line-height: 50px;
+    text-align: center;
+    color: $color-dark;
+    padding-bottom: 16px;
+}
+
+.team-subscribe {
+    font-family: $font-main;
+    font-weight: 400;
+    font-size: 20px;
+
+    line-height: 25px;
+    text-align: center;
+    color: $color-black;
+}
+
+.icons {
+    padding-right: 13.5px;
+    padding-left: 13.5px;
+
+}
+
+.carousel-inner {
+    display: flex;
+
+}
+
+.carousel-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.persons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 47px;
+
+    @include mobile () {
+        gap: 35px;
+        justify-content: center;
+        margin-bottom: 45px;
+    }
+}
+
+.person {
+    padding: 20px 25px;
+    border-radius: 5px;
+    box-shadow: 3px 4px 12px 1px rgba(0, 0, 0, 0.25);
+    background: $color-white;
+    margin-bottom: 45px;
+
+    @include mobile () {
+        margin-bottom: 0;
+    }
+}
+
+.person-name {
+    padding-top: 19px;
+    padding-bottom: 17px;
+    font-family: $font-additional;
+    font-weight: 700;
+    font-size: 24px;
+
+    line-height: 30px;
+    color: $color-dark;
+}
+
+.person-pos {
+    font-family: $font-main;
+    font-weight: 400;
+    font-size: 15px;
+
+    line-height: 19px;
+    color: $color-dark75;
+}

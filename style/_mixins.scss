@@ -1,0 +1,19 @@
+@mixin font-typography($color, $family, $size, $style, $weight, $line) {
+    color: $color;
+    font-family: $family;
+    font-size: $size;
+    font-style: $style;
+    font-weight: $weight;
+    line-height: $line;
+}
+
+@mixin font-typography-upper($color, $family, $size, $style, $weight, $line, $spacing, $transform) {
+    color: $color;
+    font-family: $family;
+    font-size: $size;
+    font-style: $style;
+    font-weight: $weight;
+    line-height: $line;
+    letter-spacing: $spacing;
+    text-transform: $transform;
+}
